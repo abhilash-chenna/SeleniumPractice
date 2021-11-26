@@ -1,1 +1,61 @@
-Test document for git practice
+
+WebDriver driver;
+
+System.setProperty("webdriver.chrome.driver", "chrome driver path");
+System.setProperty("webdriver.gecko.driver", "firefox driver path");
+
+driver = new ChromeDriver();
+driver = new FireFoxDriver();
+
+driver.manage().window().maximize();
+
+driver.get(url);
+
+
+driver.findElement(By.id(webelement id)).sendKeys(text);
+driver.findElement(By.id(webelement id)).click();
+
+id
+name
+cssSelector
+xpath
+linkText
+partialLinkText
+className
+tagName
+
+
+Select dropdown = new Select(driver.findElement(By.id()));
+dropdown.selectByVisibleText(visible text string);
+dropdown.selectByValue(value);
+dropdown.selectByIndex(index);
+
+
+List<WebElement> elements = dropdown.getOptions();
+
+for(WebElement element:elements)
+{
+	System.out.println(element);
+}
+
+
+public static WebElement findElement(By by) thorws Exception
+{
+	return WebElement elem = driver.findElement(by);
+}
+
+
+@DataProvider (name = "TC_01")
+public Object[][] Test() throws Exception
+{
+	return obj = new Object[][] {
+				{"abhilash", "babu", 1234, "chenna"},
+				{"abhi", "babu", 4321, "chenna"}
+			};
+}
+
+@Test (dataProvider = "TC_01")
+public void Test_args(String x, String y, int a, String z) throws Exception
+{
+	lines of code
+}
